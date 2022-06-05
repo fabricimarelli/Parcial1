@@ -88,13 +88,11 @@ fieldset{
 
 .field-sexo{
     display: flex;
-    justify-content: center;
-    font-size: large;
+    flex-direction: column;
+    font-size: x-large;
     font-weight: 600;
-    padding: 4%;
-    margin-bottom: 10%;
-    width: 100%;
-  
+    margin: 5%;
+    padding: 0;
 }
 
 .field-sexo legend{
@@ -102,17 +100,18 @@ fieldset{
     font-weight: 800;
 }
 
-.field-sexo label{
-   padding-right: 5%;
+.field-sexo ul{
+    list-style: none;
 }
+
 
 .field-interes{
     display: flex;
     flex-direction: column;
     font-size: x-large;
     font-weight: 600;
-    margin-bottom: 10%;
-    
+    margin:5%;
+    padding: 0;
 }
 
 .field-interes label{
@@ -125,7 +124,7 @@ fieldset{
 .comentarios{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
+    margin: 5%;
     font-size: x-large;
     
 }
@@ -133,6 +132,7 @@ fieldset{
 .comentarios textarea{
     height: 200px;
     width: 100%;
+    font-size: larger;
 }
 
 .botones{
@@ -143,11 +143,33 @@ fieldset{
 
 }
 
+
+
 .botones input{
     font-size: larger;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     text-transform:uppercase;
-    
+        
 }
+
+.botones input:hover{
+    background-color: rgb(255, 92, 92);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(255, 217, 0, 0.904);
+    font-family: Baskerville Old Face, Hoefler Text, Times New Roman, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: brown;
+    border:solid 4px blue;
+    border-radius: 6px;
+    margin-top: 10px;
+
+}
+
 
