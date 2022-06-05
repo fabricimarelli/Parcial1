@@ -14,56 +14,77 @@
             <img src="https://cdn-icons-png.flaticon.com/512/2875/2875409.png" alt="Logo">
        </header>
        <section>
-            <div class="form-container">
+            <div class="form-conteiner">
                 <form>
-                    <div>
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre"minlength="2" maxlength="15" ><br>
-                        <label for="apellido">Apellido:</label><br>
-                        <input type="text" id="apellido" name="apellido" minlength="2" maxlength="15" ><br>
-                        <label for="email">Email:</label><br>
-                        <input type="email" name="email" id="email"><br>
-                        <label for="edad">Edad:</label><br>
-                        <input type="number"name="edad" id="edad"><br>
-                        <p>Sexo:</p>
-                        <input type="radio" id="male" name="sexo" value="Masculino">
-                        <label for="male">Masculino</label><br>
-                        <input type="radio" id="female" name="sexo" value="Femenino">
-                        <label for="female">Femenino</label><br>
-                        <input type="radio" id="other" name="sexo" value="Otro">
-                        <label for="other">Otro</label><br>
+                    <div class="text-box">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="TuEmail@ejemplo.com">
+                        <label for="edad">Edad:</label>
+                        <input type="number"name="edad" id="edad" placeholder="Ingrese edad">
+                        <div class="select-pais">
+                            <legend class="legend2">País:</legend>
+                            <select id="pais" name="pais">
+                                <option value="argentina">Argentina</option>
+                                <option value="uruguay">Uruguay</option>
+                                <option value="chile">Chile</option>
+                                <option value="paraguay">Paraguay</option>
+                                <option value="bolivia">Bolivia</option>
+                                <option value="brasil">Brasil</option>
+                                <option value="peru">Peru</option>
+                            </select>
+                        </div>
+    
                     </div>
-                    <div>
-                        <p>Temas de interes: </p>
-                        <input type="checkbox" id="musica" name="musica" value="Musica">
-                        <label for="musica">Música</label><br>
-                        <input type="checkbox" id="deporte" name="deporte" value="Deporte">
-                        <label for="deporte">Deporte</label><br>
-                        <input type="checkbox" id="juegos" name="juegos" value="Juegos">
-                        <label for="juegos">Juegos</label><br>
-                        <input type="checkbox" id="tecnologia" name="tecnologia" value="Tecnologia">
-                        <label for="tecnologia">Tecnología</label><br>
-                    </div>
-                    <div>
-                        <legend>País:</legend>
-                        <select id="pais" name="pais">
-                            <option value="argentina">Argentina</option>
-                            <option value="chile">Chile</option>
-                            <option value="brasil">Brasil</option>
-                            <option value="uruguay">Uruguay</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="comentario">Comentario:</label><br>
-                        <textarea class="input_textarea" type="text" id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea>
+                    <div class="fieldset-cont">
+                        <fieldset class="field-sexo">
+                            <legend>Sexo</legend>
+                            <input type="radio" id="male" name="sexo" value="Masculino">
+                            <label for="male">Masculino</label>
+                            <input type="radio" id="female" name="sexo" value="Femenino">
+                            <label for="female">Femenino</label>
+                            <input type="radio" id="other" name="sexo" value="Otro">
+                            <label for="other">Otro</label>
+                        </fieldset>
+                        <fieldset class="field-interes">
+                            <legend>Temas de interes</legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="musica" name="musica" value="Musica">
+                                    <label for="musica">Música</label>    
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="deporte" name="deporte" value="Deporte">
+                                    <label for="deporte">Deporte</label>    
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="juegos" name="juegos" value="Juegos">
+                                    <label for="juegos">Juegos</label>    
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="tecnologia" name="tecnologia" value="Tecnologia">
+                                    <label for="tecnologia">Tecnología</label>    
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <div class="comentarios"> 
+                            <label for="comentario">Comentario:</label>
+                            <textarea class="input_textarea" type="text" id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea>
+                        </div>  
                     </div>
                     <div class="botones">
-                        <input type="submit" id="submit" name="submit" value="Enviar"><br>
+                        <input type="submit" id="submit" name="submit" value="Enviar">
                         <input type="reset" id="reset" name="reset">
                     </div>
                 </form>
             </div>
         </section>
+        <footer>
+            
+        </footer>
     </body>
 </html>
 
