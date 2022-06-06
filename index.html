@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="mediaquery.css">
+        <script src="app.js"></script>
         <title>Parcial 1</title>
     </head>
     <body>
@@ -15,17 +16,21 @@
        </header>
        <section>
             <div class="form-conteiner">
-                <form>
+                <form id="frm">
                     <div class="row">
                         <div class="text-box">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre">
+                            <p id="error-nombre" class="ocultar-error">Minimo 3 caracteres</p>
                             <label for="apellido">Apellido:</label>
                             <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido">
+                            <p id="error-apellido" class="ocultar-error">Minimo 3 caracteres</p>
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" placeholder="TuEmail@ejemplo.com">
+                            <input type="text" name="email" id="email" placeholder="TuEmail@ejemplo.com">
+                            <p id="error-email" class="ocultar-error">Minimo 3 caracteres, maximo 15</p>
                             <label for="edad">Edad:</label>
-                            <input type="number"name="edad" id="edad" placeholder="Ingrese edad">
+                            <input name="edad" id="edad" placeholder="Ingrese edad">
+                            <p id="error-edad" class="ocultar-error">Minimo 3 caracteres, maximo 15</p>
                             <div class="select-pais">
                                 <legend class="legend2">País:</legend>
                                 <select id="pais" name="pais">
@@ -44,19 +49,20 @@
                             <fieldset class="field-sexo">
                                 <legend>Sexo</legend>
                                 <ul>
-                                <li>
+                                    <li>
                                         <input type="radio" id="male" name="sexo" value="Masculino">
                                         <label for="male">Masculino</label>  
-                                </li> 
-                                <li>
+                                    </li> 
+                                    <li>
                                         <input type="radio" id="female" name="sexo" value="Femenino">
                                         <label for="female">Femenino</label>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                         <input type="radio" id="other" name="sexo" value="Otro">
                                         <label for="other">Otro</label>
-                                </li>
+                                    </li>
                                 </ul>
+                                <p id="error-sexo" class="ocultar-error">Minimo 3 caracteres, maximo 15</p>
                             </fieldset>
                             <fieldset class="field-interes">
                                 <legend>Temas de interes</legend>
@@ -77,7 +83,12 @@
                                         <input type="checkbox" id="tecnologia" name="tecnologia" value="Tecnologia">
                                         <label for="tecnologia">Tecnología</label>    
                                     </li>
+                                    <li>
+                                        <input type="checkbox" id="otros" name="otros" value="Otros">
+                                        <label for="otros">Otros</label>
+                                    </li>
                                 </ul>
+                                <p id="error_interes" class="ocultar-error">Minimo 3 caracteres, maximo 15</p>
                             </fieldset>
                         </div>
                         <div class="comentarios"> 
