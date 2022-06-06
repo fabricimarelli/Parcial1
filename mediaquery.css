@@ -9,13 +9,13 @@
 
     .text-box{
         float: left;
-        width: 50%;
+        width: 40%;
         
     }
 
     .fieldset-cont{
         float: right;
-        width: 50%;
+        width: 40%;
     }
 
     .comentarios{

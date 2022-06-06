@@ -10,7 +10,7 @@ header{
     color: rgb(252, 80, 0);
     border:solid 4px blue;
     border-radius: 6px;
-
+    margin-bottom: 10px;
    
 }
 
@@ -20,7 +20,7 @@ header img{
     justify-content: center;
     width: 10%;
     height: 10%;
-    padding: 2%;
+    padding: 1%;
 }
 
 body{
@@ -32,8 +32,7 @@ body{
     justify-content:center;
     border:solid 4px black;
     border-radius: 6px;
-    margin-top: 10px;
-    padding: 10%;
+    padding: 6%;
 }
 
 form{
@@ -51,9 +50,7 @@ fieldset{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    size: 30;
 }
-
 
 .text-box label{
     font-size:x-large;
@@ -94,7 +91,7 @@ fieldset{
     flex-direction: column;
     font-size: x-large;
     font-weight: 600;
-    margin: 5%;
+    margin: 5%;;
     padding: 0;
 }
 
