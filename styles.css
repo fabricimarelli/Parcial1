@@ -50,6 +50,7 @@ fieldset{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 
 .text-box label{
@@ -58,10 +59,10 @@ fieldset{
 
 .select-pais{
    font-size: x-large;
-   padding-top: 5%;
-   padding-bottom: 5%;
-   padding-left: 30%;
-   padding-right: 50%;
+   margin-top: 5%;
+   margin-bottom: 5%;
+   margin-left: 30%;
+   margin-right: 30%;
 }
 
 .select-pais legend{
@@ -130,7 +131,7 @@ fieldset{
 }
 
 .comentarios textarea{
-    height: 200px;
+    height: 100px;
     width: 100%;
     font-size: larger;
 }
@@ -139,7 +140,7 @@ fieldset{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 5%;
+    margin: 5%;
 
 }
 
