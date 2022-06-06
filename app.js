@@ -13,8 +13,8 @@ window.onload=function(){
     var error_edad = document.getElementById('error-edad');
     var sexo = document.getElementsByName('sexo');
     var error_sexo = document.getElementById('error-sexo');
-    var temas = document.getElementsByName('tema');
-    var error_temas = document.getElementById('error-temas');
+    var tema = document.getElementsByName('tema');
+    var error_tema = document.getElementById('error-tema');
 
     //validacioness
     function validar(evento){
@@ -24,7 +24,7 @@ window.onload=function(){
         validar_edad();
         validar_sexo();
         validar_temas();
-        //validar_vacios();
+        
     }
     
     //valida  nombre y apellido
@@ -64,14 +64,14 @@ window.onload=function(){
         
         var cont=0;
         var i=0;
-        for(i;i<(temas.length);i++){
-            if(temas[i].checked==false){
+        for(i;i<(tema.length);i++){
+            if(tema[i].checked==false){
                 cont=cont+1;
             }
         }
 
-        if(cont==(temas.length)){
-            error_temas.classList.remove('ocultar-error')
+        if(cont==(tema.length)){
+            error_tema.classList.remove('ocultar-error')
         }
     }
 
@@ -88,7 +88,7 @@ window.onload=function(){
     email.addEventListener('focus',limpiar_error);
     edad.addEventListener('focus',limpiar_error);
     sexo.forEach(sexo => sexo.addEventListener('change', limpiar_error));
-    temas.forEach(temas => temas.addEventListener('change', limpiar_error));
+    tema.forEach(tema => tema.addEventListener('change', limpiar_error));
     
     
 }
