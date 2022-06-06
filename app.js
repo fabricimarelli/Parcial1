@@ -75,6 +75,20 @@ window.onload=function(){
         }
     }
 
-
+    //limpia los errores
+    function limpiar_error(){
+        var error_activo = "error-" + document.activeElement.name;
+        var error = document.getElementById(error_activo);
+        error.classList.add('ocultar-error');
+    }
+    
+    // Eventos para "limpiar" errores
+    nombre.addEventListener('focus',limpiar_error);
+    apellido.addEventListener('focus', limpiar_error);
+    email.addEventListener('focus',limpiar_error);
+    edad.addEventListener('focus',limpiar_error);
+    sexo.forEach(sexo => sexo.addEventListener('change', limpiar_error));
+    temas.forEach(temas => temas.addEventListener('change', limpiar_error));
+    
     
 }
