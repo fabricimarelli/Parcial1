@@ -1,0 +1,193 @@
+header{
+    background-color: rgba(255, 217, 0, 0.904);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Baskerville Old Face, Hoefler Text, Times New Roman, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(252, 80, 0);
+    border:solid 4px blue;
+    border-radius: 6px;
+
+   
+}
+
+header img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 10%;
+    padding: 2%;
+}
+
+body{
+    background-color: rgb(218, 238, 144);
+}
+
+.form-conteiner{
+    display: flex;
+    justify-content:center;
+    border:solid 4px black;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+form{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+}
+
+fieldset{
+    border:solid 2px black;
+    display: flex;
+  
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-box label{
+    font-size:x-large;
+}
+
+.select-pais{
+   font-size: x-large;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   padding-left: 30%;
+   padding-right: 50%;
+}
+
+.select-pais legend{
+    padding-left: 32%;
+    padding-right: 78%;
+}
+
+.select-pais select{
+    border: solid 2px black;
+    border-radius: 4px;
+    font-size: x-large;
+    font-weight: 600;
+    
+}
+
+.text-box input{
+    width: 100%;
+    height: 30px;
+    border: solid 1px black ;
+    border-radius: 6px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.field-sexo{
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    font-weight: 600;
+    margin: 5%;
+    padding: 0;
+}
+
+.field-sexo legend{
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.field-sexo ul{
+    list-style: none;
+}
+
+
+.field-interes{
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    font-weight: 600;
+    margin:5%;
+    padding: 0;
+}
+
+.field-interes label{
+    padding-right: 2%;
+}
+ .field-interes ul{
+     list-style: none;
+ }
+
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    font-size: x-large;
+    
+}
+
+.comentarios textarea{
+    height: 200px;
+    width: 100%;
+    font-size: larger;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5%;
+
+}
+
+
+
+.botones input{
+    font-size: larger;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+        
+}
+
+.botones #reset:hover{
+    background-color: rgb(255, 92, 92);
+}
+
+.botones #submit:hover{
+    background-color: rgb(83, 255, 135);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(255, 217, 0, 0.904);
+    font-family: Baskerville Old Face, Hoefler Text, Times New Roman, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: brown;
+    border:solid 4px blue;
+    border-radius: 6px;
+    margin-top: 10px;
+
+}
+
+.ocultar-error{
+    display: none;
+}
+
+.text-box p{
+    font-size: small;
+    color: red;
+    margin-top:0%;
+}
+
+.fieldset-cont p{
+    font-size:large;
+    color: red;
+    margin-left: 10px;
+}
