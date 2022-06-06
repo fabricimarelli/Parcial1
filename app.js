@@ -23,7 +23,7 @@ window.onload=function(){
         validar_email();
         validar_edad();
         validar_sexo();
-        validar_temas();
+        //validar_temas();
         //validar_vacios();
     }
     
@@ -54,67 +54,10 @@ window.onload=function(){
 
     //valida sexo
     function validar_sexo() {
-        if ((sexo[0].checked == false) && (sexo[1].checked == false)){
+        if ((sexo[0].checked == false) && (sexo[1].checked == false) && (sexo[2].checked == false)){
             error_sexo.classList.remove('ocultar-error');
         }
     }
 
     
-    //Funcion limpiar error
-    function limpiar_error(tipo_error) {
-      return  tipo_error.classList.add('ocultar-error');
-    }
-    
-    nombre.addEventListener('focus', limpiar_error);
-    apellido.addEventListener('focus', limpiar_error_apellido);
-
-
-    function limpiar_error_nombre(evento) {
-        error_nombre.classList.add('ocultar-error');
-    }
-    function limpiar_error_apellido(evento) {
-        error_apellido.classList.add('ocultar-error');
-    }
-    
-    email.addEventListener('focus',limpiar_error_mail);
-
-    function limpiar_error_mail(evento) {
-        error_mail.classList.add('esconder_error');
-    }
-
-
-    edad.addEventListener('focus',limpiar_error_edad);
-
-    function limpiar_error_edad(evento) {
-        error_edad.classList.add('esconder_error');
-    }
-
-    function validar_sexo() {
-        if ((sexo[0].checked == false) && (sexo[1].checked == false)){
-            error_sexo.classList.remove('esconder_error');
-        }
-    }
-
-    sm.addEventListener('change',limpiar_error_sexo);
-    sf.addEventListener('change',limpiar_error_sexo);
-
-    function limpiar_error_sexo(evento) {
-        error_sexo.classList.add('esconder_error');
-    }
-
-    function validar_temas(){
-        var i=0;
-        var j=0;
-        for (i = 0; i < temas.length; i++) {
-            var element = temas[i];
-            if(element == null){
-                j++;
-            } 
-        }
-        if(j == 5){
-            error_temas.classList.remove('esconder_error');
-        }
-    }
 }
-
-
