@@ -21,15 +21,12 @@
     .comentarios{
         float:bottom;
         width: 90%;
-        margin: 5%;
     }
 
     .botones{
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-right: 30%;
-        margin-left: 30%;
     
     }
     
