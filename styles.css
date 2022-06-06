@@ -153,8 +153,12 @@ fieldset{
         
 }
 
-.botones input:hover{
+.botones #reset:hover{
     background-color: rgb(255, 92, 92);
+}
+
+.botones #submit:hover{
+    background-color: rgb(83, 255, 135);
 }
 
 footer{
@@ -176,3 +180,14 @@ footer{
     display: none;
 }
 
+.text-box p{
+    font-size: small;
+    color: red;
+    margin-top:0%;
+}
+
+.fieldset-cont p{
+    font-size:large;
+    color: red;
+    margin-left: 10px;
+}
