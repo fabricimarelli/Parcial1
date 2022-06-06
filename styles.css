@@ -33,6 +33,7 @@ body{
     border:solid 4px black;
     border-radius: 6px;
     margin-top: 10px;
+    padding: 10%;
 }
 
 form{
@@ -50,7 +51,9 @@ fieldset{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    size: 30;
 }
+
 
 .text-box label{
     font-size:x-large;
