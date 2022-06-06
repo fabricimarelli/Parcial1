@@ -13,7 +13,7 @@ window.onload=function(){
     var error_edad = document.getElementById('error-edad');
     var sexo = document.getElementsByName('sexo');
     var error_sexo = document.getElementById('error-sexo');
-    var temas = document.getElementsByName('temas');
+    var temas = document.getElementsByName('tema');
     var error_temas = document.getElementById('error-temas');
 
     //validacioness
@@ -23,7 +23,7 @@ window.onload=function(){
         validar_email();
         validar_edad();
         validar_sexo();
-        //validar_temas();
+        validar_temas();
         //validar_vacios();
     }
     
@@ -58,6 +58,23 @@ window.onload=function(){
             error_sexo.classList.remove('ocultar-error');
         }
     }
+
+    //valida temas
+    function validar_temas(){
+        
+        var cont=0;
+        var i=0;
+        for(i;i<(temas.length);i++){
+            if(temas[i].checked==false){
+                cont=cont+1;
+            }
+        }
+
+        if(cont==(temas.length)){
+            error_temas.classList.remove('ocultar-error')
+        }
+    }
+
 
     
 }
