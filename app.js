@@ -1,6 +1,7 @@
 window.onload=function(){
 
     document.getElementById("frm").addEventListener('submit', validar);
+    document.getElementById("frm").addEventListener('reset', resetear)
 
     //variables
     var nombre = document.getElementById('nombre');
@@ -16,6 +17,14 @@ window.onload=function(){
     var tema = document.getElementsByName('tema');
     var error_tema = document.getElementById('error-tema');
 
+   //resetear
+    function resetear(){
+        var arrayVar=[error_nombre,error_apellido,error_email,error_sexo,error_tema]
+        for(i;i<(arrayVar.length);i++){
+            arrayVar[i].classList.add('ocultar-error');
+        }
+    }
+   
     //validacioness
     function validar(evento){
         evento.preventDefault();
@@ -33,7 +42,7 @@ window.onload=function(){
             y.classList.remove('ocultar-error');
         }
         if(z.value.length<3){
-            w.classList.remove('ocultar-error')
+            w.classList.remove('ocultar-error');
         }
     }
 
