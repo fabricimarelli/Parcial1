@@ -140,10 +140,12 @@ window.onload=function(){
             modal.style.display = "none";
         }
     }
-    
+
+    //setea el intervalo y color de parpadeo
     window.setInterval(parpadea,500);
     var color="red";
 
+    //funcion parpadea el mensaje de exito
     function parpadea(){
         
         var mensaje_parpadea=document.getElementById("mensaje_parpadea")
