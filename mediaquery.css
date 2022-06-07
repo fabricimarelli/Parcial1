@@ -9,13 +9,13 @@
 
     .text-box{
         float: left;
-        width: 50%;
+        width: 40%;
         
     }
 
     .fieldset-cont{
         float: right;
-        width: 50%;
+        width: 40%;
     }
 
     .comentarios{
@@ -27,8 +27,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-right: 30%;
-        margin-left: 30%;
     
     }
     

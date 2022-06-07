@@ -1,6 +1,7 @@
 window.onload=function(){
 
     document.getElementById("frm").addEventListener('submit', validar);
+    document.getElementById("frm").addEventListener('reset', resetear)
 
     //variables
     var nombre = document.getElementById('nombre');
@@ -15,25 +16,55 @@ window.onload=function(){
     var error_sexo = document.getElementById('error-sexo');
     var tema = document.getElementsByName('tema');
     var error_tema = document.getElementById('error-tema');
+    var modal = document.getElementById("modal-exito");
+    var span = document.getElementsByClassName("close")[0];
+    var exito=true;
 
-    //validacioness
+   //resetear
+    function resetear(){
+        limpiaReset();
+   }
+
+   //limpia los errores al resetear
+    function limpiaReset(){
+        var arrayVarError=[error_nombre,error_apellido,error_edad,error_email,error_sexo,error_tema]
+        i=0;
+        for(i;i<(arrayVarError.length);i++){
+            
+            arrayVarError[i].classList.add('ocultar-error');
+        }
+
+    }
+
+    //validaciones
     function validar(evento){
         evento.preventDefault();
+        exito=true;
         largo(nombre,error_nombre,apellido,error_apellido);
         validar_email();
         validar_edad();
         validar_sexo();
         validar_temas();
+        abrir_modal();
         
     }
     
+    //abrir modal
+    function abrir_modal(){
+        if(exito){
+            modal.style.display="block";
+        }
+    }
+
     //valida  nombre y apellido
     function largo(x,y,z,w){
         if(x.value.length < 3){
             y.classList.remove('ocultar-error');
+            exito=false;
         }
         if(z.value.length<3){
-            w.classList.remove('ocultar-error')
+            w.classList.remove('ocultar-error');
+            exito=false;
         }
     }
 
@@ -42,13 +73,16 @@ window.onload=function(){
         emailEstructura = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
         if (!emailEstructura.test(email.value)) {
             error_email.classList.remove('ocultar-error');
+            exito=false;
         }
     }
 
     //valida edad entero (0;100)
     function validar_edad(){
-        if(edad.value <= 0 || edad.value >=100 ){
+        edadEstructura=/[0-9]+/;
+        if(edad.value <= 0 || edad.value >=100 || (!edadEstructura.test(edad.value)) ){
             error_edad.classList.remove('ocultar-error');
+            exito=false;
         }
     }
 
@@ -56,6 +90,7 @@ window.onload=function(){
     function validar_sexo() {
         if ((sexo[0].checked == false) && (sexo[1].checked == false) && (sexo[2].checked == false)){
             error_sexo.classList.remove('ocultar-error');
+            exito=false;
         }
     }
 
@@ -72,6 +107,8 @@ window.onload=function(){
 
         if(cont==(tema.length)){
             error_tema.classList.remove('ocultar-error')
+            exito=false;
+
         }
     }
 
@@ -82,7 +119,7 @@ window.onload=function(){
         error.classList.add('ocultar-error');
     }
     
-    // Eventos para "limpiar" errores
+    // eventos limpieza errores
     nombre.addEventListener('focus',limpiar_error);
     apellido.addEventListener('focus', limpiar_error);
     email.addEventListener('focus',limpiar_error);
@@ -90,5 +127,19 @@ window.onload=function(){
     sexo.forEach(sexo => sexo.addEventListener('change', limpiar_error));
     tema.forEach(tema => tema.addEventListener('change', limpiar_error));
     
+    //MODAL
+
+    //para cerrar el modal cuando click X
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    //para cerrar modela click en pantalla
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     
 }
+
