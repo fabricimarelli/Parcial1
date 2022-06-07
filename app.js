@@ -141,5 +141,14 @@ window.onload=function(){
         }
     }
     
+    window.setInterval(parpadea,500);
+    var color="red";
+
+    function parpadea(){
+        
+        var mensaje_parpadea=document.getElementById("mensaje_parpadea")
+        color=(color=="#08cc15")? "red" : "#08cc15";
+        mensaje_parpadea.style.color=color;
+    }
 }
 
